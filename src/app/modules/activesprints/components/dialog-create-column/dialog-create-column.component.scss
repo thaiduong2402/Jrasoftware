@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 16px 16px;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: 400px;
+}
+
+input {
+  margin: 8px 0;
+}
+
+button + button {
+  margin-left: 8px;
+}

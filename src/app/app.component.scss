@@ -1,0 +1,39 @@
+ul.menu {
+    list-style-type: none;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+/* Định dạng cho các mục menu */
+ul.menu li {
+    margin: 10px 10px;
+}
+
+/* Định dạng cho liên kết trong menu */
+ul.menu li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    transition: transform  1s;
+    margin-left: -20px;
+}
+
+/* Hiệu ứng hover khi di chuột qua mục menu */
+ul.menu li a:hover {
+    color: rgb(48, 29, 226);
+    transform: scale(1.1);
+}
+
+
+  
+ul li{
+    margin-left: 50px !important;
+  }
+    
+  
+    

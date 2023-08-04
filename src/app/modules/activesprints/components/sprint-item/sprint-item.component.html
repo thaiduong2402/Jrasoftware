@@ -1,0 +1,26 @@
+<div class="print p-1 mt-1" style="background-color: rgb(255, 255, 255)">
+    <div class="top d-flex justify-content-between align-items-center ">
+        <span  style=" outline: none; border: none;" >{{item?.name}} </span>
+        <!-- <input id="name" type="text" [formControl]="name" [disabled]="!isEditing" style="background-color: white ; outline: none; border: none;"> -->
+        <div class="box">
+            <div *ngIf="item?.process !== 'done'"  class="d-flex">
+                <button mat-icon-button color="warn" (click)="onDelete(item)"><mat-icon>delete</mat-icon></button>
+                <button mat-icon-button color="warn" (click)="onEdit(item)"><mat-icon>edit</mat-icon></button></div>
+            </div>
+            <div *ngIf="item?.process === 'done'" style="color: greenyellow;">
+                <mat-icon>check_circle</mat-icon>
+            </div>
+    </div>
+    <div class="bot d-flex justify-content-between align-items-center">
+        <div style="color: lawngreen" class=" d-flex align-items-center ">
+            <mat-icon>turned_in</mat-icon>
+            <span style="color: darkgray;"><b>{{item?.description}}</b></span></div>
+        <div class="box d-flex align-items-center">
+            <span *ngIf="item?.process === 'done'" style="text-decoration: line-through;color: blue;">{{item?.id}}</span>
+            <span *ngIf="item?.process !== 'done'"  >{{item?.id}}</span>
+            <button mat-icon-button color="warn" ><mat-icon>  </mat-icon></button>
+        </div>
+    </div>
+
+</div>
+

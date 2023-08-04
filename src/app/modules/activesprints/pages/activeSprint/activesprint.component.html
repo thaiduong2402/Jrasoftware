@@ -1,0 +1,21 @@
+
+  <div class="row" style="margin-top: 50px;">
+    
+    <div class="col-md-11">
+      <app-column (dataToSprintParentDelete)="receiveDataFromChildDelete($event)"
+        (dataToSprintParentUpdate)="receiveDataFromChildUpdate($event)"></app-column>
+    </div>
+    <div class="col-1">
+      <button (click)="openDialogAddColumn()" mat-fab color="accent"
+        matTooltip="Add Column"
+        aria-label="Example icon button with a bookmark icon">
+        <mat-icon>add</mat-icon>
+      </button>
+      
+      <button class="mt-4" (click)="openDialog()" mat-fab color="accent"
+      matTooltip="Add Active Sprint"
+      aria-label="Example icon button with a bookmark icon">
+      <mat-icon>add</mat-icon>
+    </button>
+    </div>
+  </div>

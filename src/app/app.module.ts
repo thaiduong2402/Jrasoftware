@@ -1,42 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { TodoComponent } from './todo/todo.component';
-
-import {MatIconModule} from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatCardModule} from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
-import {DragDropModule} from '@angular/cdk/drag-drop';
-import { SprintItemComponent } from './sprint-item/sprint-item.component';
+import { StoreModule } from '@ngrx/store';
+import { ActiveSprintReducer } from './share/store/activeSprint/activesprint.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import { MyEffects } from './share/store/activeSprint/activespint.effect'
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    TodoComponent,
-    SprintItemComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatTabsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    DragDropModule
+    BrowserAnimationsModule,
+    StoreModule.forRoot({activeSprint: ActiveSprintReducer}),
+    EffectsModule.forRoot([MyEffects]),
+    StoreDevtoolsModule.instrument(),
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
-export class AppModule { }
+export class AppModule {
+  
+ }
