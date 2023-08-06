@@ -13,9 +13,12 @@
     <div class="row">
         <h3 class="m-4">  {{item?.description}}</h3>
     </div>
-    <div class="row">
-        <button mat-raised-button class="m-4" style="background-color: dodgerblue; width: 150px;">{{item?.process}} <mat-icon>arrow_drop_down</mat-icon></button>
-        <div class="popup">
-        </div>
-    </div>
+    <button [cdkMenuTriggerFor]="menu" class="example-standalone-trigger {{item?.process}}">{{item?.process}} <mat-icon>arrow_drop_down</mat-icon></button>
+
+    <ng-template #menu>
+      <div class="example-menu" cdkMenu>
+        <button *ngFor="let process of filteredProcess" class="example-menu-item" cdkMenuItem (click)="onChangeProcess(item,process)">{{process}}</button>
+      </div>
+    </ng-template>
+    
 </div>

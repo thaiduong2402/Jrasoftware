@@ -9,7 +9,7 @@ import { switchMap, map, catchError } from 'rxjs/operators';
 
 
 @Injectable()
-export class MyEffects {
+export class BackLogMyEffects {
 
   getBackLog$ = createEffect(() =>
     this.actions$.pipe(

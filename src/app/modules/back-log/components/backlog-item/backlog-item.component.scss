@@ -13,3 +13,16 @@ align-items: center;
     width: 100%;
     justify-content: space-between;
 }
+
+.inprogress {
+    background-color: rgb(168, 168, 194);
+    color: blue;
+}
+.done {
+    background-color: rgb(217, 235, 210);
+    color: green;
+}
+.todo{
+    background-color: azure;
+    color: black;
+}

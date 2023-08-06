@@ -5,7 +5,7 @@ import { AppState, ItemArray } from '../../../models/appState';
 export const selectAppState = createFeatureSelector<AppState>('activeSprint');
 export const selectTodo = (state: AppState) => state.allTask;
 
-export const selectAll = createSelector(
+export const selectAllSprint = createSelector(
     selectAppState,
     (state: AppState) => state.allTask
   );

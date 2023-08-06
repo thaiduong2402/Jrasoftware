@@ -6,14 +6,7 @@
     </div>
     <div class="backlog_item-right">
         
-        <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
-        </mat-menu>
-        
-
-
+        <span style="font-weight: bold;" class="{{item?.process}}" >{{item?.process}}</span>
         <mat-icon>account_circle</mat-icon>
     </div>
 </div>

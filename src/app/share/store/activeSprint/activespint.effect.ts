@@ -9,7 +9,7 @@ import { switchMap, map, catchError } from 'rxjs/operators';
 
 
 @Injectable()
-export class MyEffects {
+export class ActiveSprintEffects {
 
   getActiveSprint$ = createEffect(() =>
     this.actions$.pipe(

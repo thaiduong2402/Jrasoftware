@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     ActiveSprintComponent,
@@ -40,7 +41,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     CommonModule,
     ActiveSprintRoutingModule,
     ReactiveFormsModule,
-    MatTooltipModule 
+    MatTooltipModule,
+    MatMenuModule
   ]
 })
 export class ActivesprintModule { }

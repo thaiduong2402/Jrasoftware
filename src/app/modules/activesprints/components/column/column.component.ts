@@ -13,7 +13,7 @@ import { IArrTask, ITask } from 'src/app/models/task';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { AppState } from 'src/app/models/appState';
-import { selectAll } from 'src/app/share/store/activeSprint/activesprint.selector';
+import { selectAllSprint } from 'src/app/share/store/activeSprint/activesprint.selector';
 import { ActivesprintService } from 'src/app/core/sevices/activeSprint/activesprint.service';
 import { updateActiveSprint } from 'src/app/share/store/activeSprint/activesprint.actions';
 @Component({
@@ -33,7 +33,6 @@ export class ColumnComponent implements OnInit {
 
   @Output() dataToSprintParentUpdate = new EventEmitter<ITask>();
   
-  allTask$:Observable<any[]> | undefined;
   allTask: any[] = [];
   progressArrays: any;
 
@@ -41,9 +40,10 @@ export class ColumnComponent implements OnInit {
 
   }
 
+  
+
   ngOnInit(): void {
-    this.loadData();
-    this.store.select(selectAll).subscribe(data=>{
+    this.store.select(selectAllSprint).subscribe(data=>{
       this.allTask = this.filterDataByProgress(data)
     })
   }
@@ -63,10 +63,6 @@ export class ColumnComponent implements OnInit {
     return Object.values(progressArrays);
   }
 
-
-  loadData() {
-    this.allTask$ = this.sv.getDataActivesprint()
-  }
 
   receiveDataFromChildDelete(data: ITask) { 
     this.dataToSprintParentDelete.emit(data);

@@ -17,7 +17,7 @@ import { Observable, Subscription, map, of } from 'rxjs';
 import { DialogCreateColumnComponent } from '../../components/dialog-create-column/dialog-create-column.component';
 import { Store, select } from '@ngrx/store';
 import { AppState, ItemArray } from '../../../../models/appState';
-import { selectAll  } from '../../../../share/store/activeSprint/activesprint.selector';
+import { selectAllSprint  } from '../../../../share/store/activeSprint/activesprint.selector';
 import { createColumnSuccess, createSprintSuccess, deleteActiveSprintSuccess , loadActiveSprint, loadActiveSprintSuccess,createActiveSprint, updateActiveSprintSuccess, deleteActiveSprint, updateActiveSprint } from '../../../../share/store/activeSprint/activesprint.actions';
 
 
