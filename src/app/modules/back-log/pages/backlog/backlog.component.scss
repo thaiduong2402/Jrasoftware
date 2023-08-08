@@ -18,6 +18,7 @@
     cursor: move;
     background: white;
     font-size: 14px;
+    transition: background-image background-color 2.5s;
   }
   
   .cdk-drag-preview {
@@ -42,5 +43,20 @@
   
   .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .example-box:hover{
+    background-color: rgb(82, 184, 243); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, yellow,  rgb(43, 119, 233));
+  }
+
+  .sprint{
+    background-color: rgb(82, 184, 243); /* For browsers that do not support gradients */
+    background-image: linear-gradient( rgb(86, 228, 173),  rgb(26, 85, 172));
+  }
+
+  .backlog{
+    background-color: rgb(82, 184, 243); /* For browsers that do not support gradients */
+    background-image: linear-gradient( rgb(253, 130, 233),  rgb(213, 231, 50));
   }
   

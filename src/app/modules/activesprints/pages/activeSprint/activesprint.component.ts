@@ -70,7 +70,7 @@ export class ActiveSprintComponent implements OnInit {
       const dialogRef = this.dialog.open<any>(DialogCreateComponent, {
         data: {
           id: id,
-          isUpdating: this.isUpdating,
+          isUpdating: this?.isUpdating,
           name: (this.todoForm.value.name) ,
           description: ( this.todoForm.value.description),
           process : process,

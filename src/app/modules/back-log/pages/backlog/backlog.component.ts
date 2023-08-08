@@ -21,10 +21,21 @@ export class BacklogComponent implements OnInit {
   isDetailOpen: boolean = false;
   item: ITask | undefined;
   panelOpenState = false;
-  sprint: any[] = [];
+  sprint: ITask[] = [];
   backlog: ITask[] = [];
 
+  countInprogressSprint: number = 0;
+  countTodoSprint: number = 0;
+  countDoneSprint: number = 0;
+  countInprogressBacklog: number = 0;
+  countTodoBacklog: number = 0;
+  countDoneBacklog: number = 0;
+
+
+
+
   constructor(private sv : ActivesprintService , private bl : BackLogService, private store: Store<AppState>){
+    
   }
   private filterDataByProgress(data: ITask[]) {
     const progressArrays:any[] = [];
@@ -38,14 +49,25 @@ export class BacklogComponent implements OnInit {
     return progressArrays;
   }
 
+
+  
   ngOnInit(): void{
+    
     this.loadData()
     this.store.select(selectAllSprint).subscribe(data=>{
       this.sprint = this.filterDataByProgress(data)
+      this.countInprogressSprint = data.filter((task) => task.process === 'inprogress').length;
+      this.countTodoSprint = data.filter((task) => task.process === 'todo').length;
+      this.countDoneSprint = data.filter((task) => task.process === 'done').length;
     })
     this.store.select(selectAllBackLog).subscribe(data=>{
       this.backlog = this.filterDataByProgress(data)
+      this.countInprogressBacklog = data.filter((task) => task.process === 'inprogress').length;
+      this.countTodoBacklog = data.filter((task) => task.process === 'todo').length;
+      this.countDoneBacklog = data.filter((task) => task.process === 'done').length;
     })
+
+
     
     /* this.loadData();
     this.store.select(selectAllBackLog).subscribe(data=>{
@@ -57,6 +79,7 @@ export class BacklogComponent implements OnInit {
       console.log(data)
     }) */
   }
+
 
   loadData() {  
     this.store.dispatch(loadBackLog());

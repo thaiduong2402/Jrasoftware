@@ -11,21 +11,14 @@
       "id": 3,
       "description": "sprint2",
       "name": "sprint2",
-      "process": "inprogress",
+      "process": "todo",
       "done": false
     },
     {
       "id": 4,
       "description": "sprint3",
       "name": "sprint3",
-      "process": "todo",
-      "done": false
-    },
-    {
-      "id": 222,
-      "description": "backlog1",
-      "name": "backlog1",
-      "process": "done",
+      "process": "inprogress",
       "done": false
     },
     {
@@ -34,14 +27,35 @@
       "name": "sprint5",
       "process": "done",
       "done": false
+    },
+    {
+      "id": 5,
+      "description": "sprint4",
+      "name": "sprint4",
+      "process": "done",
+      "done": false
     }
   ],
   "backlog": [
+    {
+      "id": 666,
+      "description": "backlog5",
+      "name": "backlog5",
+      "process": "inprogress",
+      "done": false
+    },
     {
       "id": 333,
       "description": "backlog2",
       "name": "backlog2",
       "process": "done",
+      "done": false
+    },
+    {
+      "id": 222,
+      "description": "backlog1",
+      "name": "backlog1",
+      "process": "inprogress",
       "done": false
     },
     {
@@ -56,20 +70,6 @@
       "description": "backlog4",
       "name": "backlog4",
       "process": "todo",
-      "done": false
-    },
-    {
-      "id": 666,
-      "description": "backlog5",
-      "name": "backlog5",
-      "process": "todo",
-      "done": false
-    },
-    {
-      "id": 5,
-      "description": "sprint4",
-      "name": "sprint4",
-      "process": "done",
       "done": false
     }
   ]

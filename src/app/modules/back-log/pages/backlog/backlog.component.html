@@ -7,7 +7,7 @@
     <div class="col-8">
         <mat-accordion multi >
             <div style="margin: 20px; min-width: 100px;">
-                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel class="sprint"  (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                     <mat-expansion-panel-header>
                         <mat-panel-title>
                             Sprint
@@ -15,17 +15,17 @@
                         <mat-panel-description style="display: flex; justify-content: flex-end; padding: 10px;">
                             <button mat-mini-fab class="m-1" style="height: 70%;"
                                 aria-label="Example icon button with a plus one icon">
-                                0
+                                {{countTodoSprint}}
                             </button>
                             <button mat-mini-fab class="m-1" style="background-color: dodgerblue; height: 70%;"
                                 aria-label="Example icon button with a plus one icon">
-                                0
+                                {{countInprogressSprint}}
                             </button>
                             <button mat-mini-fab class="m-1" style="background-color: green; height: 70%;"
                                 aria-label="Example icon button with a plus one icon">
-                                0
+                                {{countDoneSprint}}
                             </button>
-                            <button mat-raised-button>Complete Sprint</button>
+                            
                             <button mat-raised-button
                                 style=" background-color: rebeccapurple;margin-left: 10px; text-align: center;"><mat-icon
                                     style=" text-align: center;color: aliceblue; font-size: 20px;">more_horiz</mat-icon></button>
@@ -44,7 +44,7 @@
                 </mat-expansion-panel>
             </div>
             <div style="margin: 20px; min-width: 100px;">
-                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel class="backlog" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                     <mat-expansion-panel-header>
                         <mat-panel-title>
                             Back Log
@@ -53,17 +53,17 @@
                         <mat-panel-description style="display: flex; justify-content: flex-end; padding: 10px;">
                             <button mat-mini-fab class="m-1" style="height: 70%;"
                                 aria-label="Example icon button with a plus one icon">
-                                0
+                                {{countTodoBacklog}}
                             </button>
                             <button mat-mini-fab class="m-1" style="background-color: dodgerblue; height: 70%;"
                                 aria-label="Example icon button with a plus one icon">
-                                0
+                                {{countInprogressBacklog}}
                             </button>
                             <button mat-mini-fab class="m-1" style="background-color: green; height: 70%;"
                                 aria-label="Example icon button with a plus one icon">
-                                0
+                                {{countDoneBacklog}}
                             </button>
-                            <button mat-raised-button>Create Sprint</button>
+                           
                         </mat-panel-description>
                     </mat-expansion-panel-header>
 
@@ -84,7 +84,7 @@
             </div>
         </mat-accordion>
     </div>
-    <div *ngIf="isDetailOpen" class="col-3" style="border-radius: 5px; border: 1px solid black;">
+    <div *ngIf="isDetailOpen" class="col-3">
         <app-detail-backlog *ngIf="isDetailOpen" [item]="item"
             (dataIsCloseToParent)="receiveIsCloseFromChild()"></app-detail-backlog>
     </div>

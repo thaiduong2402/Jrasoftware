@@ -1,7 +1,18 @@
 .detail-backlog-top {
+  display: flex;
+  justify-content: space-between;
     position: relative;
     margin: 5px;
     width: 100%;
+}
+.detail-backlog{
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  background-color: rgb(246, 37, 253); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, rgb(216, 210, 215),  rgb(168, 196, 240), rgb(228, 133, 169) , rgb(252, 172, 53) , rgb(87, 245, 73));
 }
 .example-menu {
     display: inline-flex;
@@ -11,8 +22,8 @@
     max-width: 280px;
     background-color: rgba(255, 255, 255);
     padding: 6px 0;
-    top: 300px;
-    right: 200px;
+    top: 240px;
+    right: 300px;
   }
   
   .example-menu-item {
@@ -36,8 +47,6 @@
     min-width: 64px;
     line-height: 36px;
     padding: 0 16px;
-  
-    
   }
 
   .inprogress {

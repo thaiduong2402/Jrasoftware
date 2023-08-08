@@ -8,6 +8,16 @@ align-items: center;
     align-items: center;
 }
 
+.backlog_item-right span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+
 .backlog_item{
     display: flex;
     width: 100%;
@@ -26,3 +36,10 @@ align-items: center;
     background-color: azure;
     color: black;
 }
+
+.btn_itemlink{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5 em;
+}
+

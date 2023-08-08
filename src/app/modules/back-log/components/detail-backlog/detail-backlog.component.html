@@ -8,16 +8,16 @@
         <mat-icon>thumb_up_alt</mat-icon>
         <mat-icon>share</mat-icon>
         <mat-icon>more_horiz</mat-icon>
-        <button (click)="onClose()"><mat-icon>close</mat-icon></button>
+        <mat-icon (click)="onClose()">close</mat-icon>
         </div>
     <div class="row">
-        <h3 class="m-4">  {{item?.description}}</h3>
+        <h3 class="mt-4 ml-1">  {{item?.description}}</h3>
     </div>
-    <button [cdkMenuTriggerFor]="menu" class="example-standalone-trigger {{item?.process}}">{{item?.process}} <mat-icon>arrow_drop_down</mat-icon></button>
+    <button [cdkMenuTriggerFor]="menu" class=" example-standalone-trigger {{item?.process}}">{{item?.process}} <mat-icon>arrow_drop_down</mat-icon></button>
 
     <ng-template #menu>
       <div class="example-menu" cdkMenu>
-        <button *ngFor="let process of filteredProcess" class="example-menu-item" cdkMenuItem (click)="onChangeProcess(item,process)">{{process}}</button>
+        <button style="margin-top: 5px; margin-bottom: 5px;" *ngFor="let process of filteredProcess" class=" example-menu-item" cdkMenuItem (click)="onChangeProcess(item,process)">{{process}}</button>
       </div>
     </ng-template>
     

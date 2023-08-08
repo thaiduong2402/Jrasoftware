@@ -7,8 +7,8 @@
       [cdkDropListData]="task.data"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of task.data" cdkDrag [cdkDragDisabled]="task.name === 'done' ? true : false">
-          <app-sprint-item *ngIf="item.name && item.id && item.description" [isDone]="task.name === 'done' ? true : false" (dataToParentDelete)="receiveDataFromChildDelete($event)" (dataToParentUpdate)="receiveDataFromChildUpdate($event)" [isUpdating]="isUpdating" [item]="item"></app-sprint-item>
+      <div class="example-box" *ngFor="let item of task.data" cdkDrag [cdkDragDisabled]="item.process === 'done' ? true : false">
+          <app-sprint-item *ngIf="item.name && item.id && item.description" [isDone]="item.process === 'done' ? true : false" (dataToParentDelete)="receiveDataFromChildDelete($event)" (dataToParentUpdate)="receiveDataFromChildUpdate($event)" [isUpdating]="isUpdating" [item]="item"></app-sprint-item>
       </div>
     </div>
   </div>

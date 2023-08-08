@@ -1,34 +1,31 @@
 <div class="container-fluid">
-    <div class="container-fluid">
-        <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                    <span style="font-size: 1.5em;">JraSoftware</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-                    <ul class="navbar-nav justify-content-center align-items-center d-flex">
-                        <li class="nav-item active" *ngFor="let item of navbar">
-                            {{item}}
-                        </li>
-                        <li class="nav-item active">
-                            <button mat-raised-button color="primary"
-                                style="background-color: deepskyblue">Create</button>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-        </div>
+    <div class="row row-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <span style="font-size: 1.5em;"><i><b>JraSoftware</b></i></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                <ul class="navbar-nav justify-content-center align-items-center d-flex">
+                    <li class="nav-item active" *ngFor="let item of navbar">
+                        {{item}}
+                    </li>
+                    <li class="nav-item active">
+                        <button mat-raised-button color="primary" style="background-color: deepskyblue">Create</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
-    <div class="row">
+
+    <div class="row row-bottom">
         <div class="col-1">
             <ul class="menu">
-                <h5 style="text-align: center;">Planning</h5>
+                <h5 style="text-align: center; font-size: 25px;"><b>Planning</b></h5>
                 <li><a href="#">Timeline</a></li>
                 <li><a routerLink="/backlog">Back Log</a></li>
                 <li><a href="#">Board</a></li>

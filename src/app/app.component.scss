@@ -4,6 +4,9 @@ ul.menu {
     margin: 0;
     display: flex;
     flex-direction: column;
+    box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.2);
+    background-color: aliceblue;
+
 }
 
 /* Định dạng cho các mục menu */
@@ -16,21 +19,31 @@ ul.menu li a {
     display: block;
     text-decoration: none;
     color: #333;
-    transition: transform  1s;
+    transition: all  1.5s;
     margin-left: -20px;
 }
+
+
 
 /* Hiệu ứng hover khi di chuột qua mục menu */
 ul.menu li a:hover {
     color: rgb(48, 29, 226);
     transform: scale(1.1);
+    font-weight: bold;
 }
 
-
+.row-bottom{
+    margin-top: 30px;
+}
   
 ul li{
     margin-left: 50px !important;
-  }
+}
+
+.navbar{
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, white, red , rgb(127, 212, 238), rgb(124, 226, 56), yellow , white)
+}
     
   
     
